@@ -1,0 +1,186 @@
+
+
+// color variables
+$grey: #414042;
+$blue: #0E426A;
+$blue-dark: #214099;
+$navy: #002856;
+$teal: #27AAE1;
+$green: #66BD5A;
+$lime: #A2CE4D;
+$yellow: #FFF200;
+$fawn: #F9F1DD;
+$red: #D22E27;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+body {
+	background: $fawn;
+}
+
+// background-container
+.wrap {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+
+.header {
+	display: block;
+}
+
+
+.content {
+	position: relative;
+	background: $red;
+	color: white;
+
+	.wrap {
+		position: relative;
+		padding: 20px;
+
+		@include respond-to( 768px ) {
+			padding-right: 30%;
+		}
+
+		@include respond-to( 1024px ) {
+			padding-right: 22%;
+		}
+	}
+
+	.snowman {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			top: -80px;
+			right: 0;
+			z-index: 1000;
+			max-width: 30%;
+			float: right;
+			margin-left: 10px;
+		}
+	}
+
+	h1 {
+		@include font-title;
+		color: white;
+
+		@include respond-to( 1024px ) {
+			span {
+				display: block;
+			}
+		}
+	}
+	
+	p {
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+}
+
+
+.footer {
+	background: white;
+
+	.wrap {
+		padding: 20px;
+	}
+
+	.logo {
+		text-align: center;
+
+		@include respond-to( 768px ) {
+			float: left;
+			width: 30%;
+		}
+	}
+
+	.footer-content {
+		text-align: center;
+		color: $navy;
+		text-transform: uppercase;
+		margin: 0;
+
+		@include respond-to( 768px ) {
+			float: left;
+			width: 52%;
+			padding: 20px 0 0;
+		}
+	}
+
+	.disclaimer {
+		@include clearfix;
+		font-size: .7em;
+		line-height: 1.2em;
+		padding: 20px 0;
+	}
+
+	h3 {
+		font-size: 1.4em;
+
+		@include respond-to( 768px ) {
+			padding: 5px 0;
+		}
+	}
+
+	h2 {
+		font-size: 1.7em;
+
+		@include respond-to( 768px ) {
+			font-size: 2em;
+			padding: 5px 0;
+		}
+	}
+}
+
+
+// colors
+.bg-blue { background: $blue; }
+.bg-blue-dark { background: $blue-dark; }
+.bg-teal { background: $teal; }
+.bg-green { background: $green; }
+.bg-lime { background: $lime; }
+
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px;
+	background: $lime;
+	color: $blue-dark;
+	border: 0;
+	border-radius: 10px;
+	font-size: 1.4em;
+	line-height: 1.6em;
+	margin: 0 5px;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	
+	&:hover {
+		opacity: .9;
+	}
+
+	@include respond-to( 768px ) {
+		max-width: 50%;
+		margin: 30px auto;
+	}
+}
+
+
+
