@@ -38,6 +38,10 @@ body {
 
 .header {
 	display: block;
+
+	@include respond-to( 768px ) {
+		margin-top: 10px;
+	}
 }
 
 
