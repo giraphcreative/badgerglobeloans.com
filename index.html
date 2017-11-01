@@ -16,32 +16,65 @@
 			<img src="img/header.png" class="header">
 		</div>
 		
-		<div class="content">
-
-			<div class="wrap">
+		<div class="content wrap group">
 				
-				<img src="img/snowman.png" class="snowman">
-				<h1>Get a loan. Get a prize. <span>Get into the holiday spirit.</span></h1>
-				<p>Get an auto or personal loan from the credit union and pick a special prize from Santa’s bag including $25, $50, $75 or $100 Santa bonus!* </p>
+			<h3 class="form-title">Contact Santa's Elves</h3>
 
+			<div class="group">
+				<div class="half">
+					<form id="contact" name="contact">
+						<strong><div class="error text-red"></div></strong>
+						<p>Name:
+							<input type="text" name="name" placeholder="Jane Smith" /></p>
+						<p>Email:
+							<input type="text" name="email" placeholder="jane@smith.com" /></p>
+						<p>Phone:
+							<input type="text" name="phone" placeholder="123-456-7890" /></p>
+						<p>Best Time to Contact:
+							<input type="text" name="best-time" placeholder="6pm" /></p>
+						<p>Are You a Current Member?<br>
+							<label><input type="radio" name="current-member" value="yes" /> Yes!</label> &nbsp; &nbsp; <label><input type="radio" name="current-member" value="no" checked /> Not Yet!</label></p>
+						<p>Message:
+							<textarea name="message" placeholder="Your message."></textarea></p>
+						<input type="submit" name="submit" value="Submit" class="btn" />
+					</form>
+				</div>
+
+				<div class="half">
+					<div class="clock-container">
+						<div class="pad">
+							<img src="img/title-clock.png" />
+							<div id="clock" class="clock"></div>
+						</div>
+						<div class="clock-labels group">
+							<label class="small">Days</label><label class="small">Hours</label><label>Minutes</label>
+						</div>
+					</div>
+					<div class="right-content">
+						<p>Get an auto or personal loan from the credit union and pick a special prize from Santa’s bag including $25, $50, $75 or $100 Santa bonus!*</p>
+						<p>You’ll be able to randomly choose your bonus from Santa's Bag at the branch, when you close your loan! </p>
+					</div>
+				</div>
+				
 			</div>
-			
+
+			<h3 class="form-title rates">View our current rates!</h3>
+
 		</div>
 
 		<div class="footer">
-			<div class="wrap">
-				<div class="logo">
-					<a href="https://www.badgerglobecu.org/"><img src="img/logo.png"></a>
-				</div>
-				<div class="footer-content">
-					<h3>Get your give-away at:</h3>
-					<h2><a href="http://merrygiveaway.com/">merrygiveaway.com</a></h2>
-				</div>
-
-				<div class="disclaimer">*Santa Bonus is only available November 15 - December 31, 2017. Offer subject to credit approval and may change at any time. The bonus amount will be selected at random and deposited to account within 10 business days of loan being funded. Early payment penalty may apply if loan paid off within 6 months. Limit one Santa Bonus per member. Cannot be combined with any other credit union offers. Minimum Loan amount: $2,500. </div>
+			<div class="wrap text-center">
+				<a href="https://www.badgerglobecu.org/"><img src="img/logo.png"></a>
 			</div>
 		</div>
 
+		<div class="contact-bar wrap group">
+			<div class="thirty"><a href="https://www.badgerglobecu.org/"><img src="img/contact-website.png" /> badgerglobecu.org</a></div>
+			<div class="thirty"><a href="tel:9207222122"><img src="img/contact-phone.png" /> (920) 722-2122</a></div>
+			<div class="fourty"><a href="#"><img src="img/contact-address.png" />  260 N Green Bay Rd, Neenah, WI 54956</a></div>
+		</div>
+
+		<div class="disclaimer wrap">*Santa Bonus is only available November 15 - December 31, 2017. Offer subject to credit approval and may change at any time. The bonus amount will be selected at random and deposited to account within 10 business days of loan being funded. Early payment penalty may apply if loan paid off within 6 months. Limit one Santa Bonus per member. Cannot be combined with any other credit union offers. Minimum Loan amount: $2,500.</div>
 	</main>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js?v=1"></script>
 	<script src="js/main.js"></script>

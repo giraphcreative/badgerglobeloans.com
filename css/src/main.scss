@@ -5,7 +5,7 @@ $grey: #414042;
 $blue: #0E426A;
 $blue-dark: #214099;
 $navy: #002856;
-$teal: #27AAE1;
+$teal: #4AACC4;
 $green: #66BD5A;
 $lime: #A2CE4D;
 $yellow: #FFF200;
@@ -45,38 +45,42 @@ body {
 }
 
 
+.form-title, .rates {
+	display: block;
+	height: 50px;
+	margin-left: -20px;
+	background: url(../img/bg-flag-left.png) right center no-repeat;
+	background-size: cover;
+	color: $red;
+	font-size: 25px;
+	line-height: 50px;
+	padding: 0;
+	text-align: center;
+
+	@include respond-to( 768px ) {
+		max-width: 56%;
+	}
+}
+
+
+.rates {
+	background: url(../img/bg-flag-right.png) left center no-repeat;
+	margin-left: 0;
+	margin-right: -20px;
+	
+	@include respond-to( 768px ) {
+		float: right;
+		width: 56%;
+	}
+}
+
+
 .content {
 	position: relative;
 	background: $red;
 	color: white;
-
-	.wrap {
-		position: relative;
-		padding: 20px;
-
-		@include respond-to( 768px ) {
-			padding-right: 30%;
-		}
-
-		@include respond-to( 1024px ) {
-			padding-right: 22%;
-		}
-	}
-
-	.snowman {
-		display: none;
-
-		@include respond-to( 768px ) {
-			display: block;
-			position: absolute;
-			top: -80px;
-			right: 0;
-			z-index: 1000;
-			max-width: 30%;
-			float: right;
-			margin-left: 10px;
-		}
-	}
+	padding: 20px;
+	@include clearfix;
 
 	h1 {
 		@include font-title;
@@ -93,12 +97,88 @@ body {
 		font-size: 1.2em;
 		line-height: 1.5em;
 	}
+
+	.half:last-child { 
+		padding-top: 20px;
+
+		.right-content {
+			padding: 20px 0;
+		}
+	}
+
+	@include respond-to( 768px ){
+		.half:first-child {
+			width: 51%;
+
+			input[type=submit] {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: -50px;
+			}
+		}
+
+		.half:last-child {
+			width: 41%;
+			margin-left: 2.5%;
+			padding-top: 0;
+
+			.right-content {
+				margin-right: -20px;
+				background: url(../img/snowman.png) right center no-repeat;
+				background-size: contain;
+				padding-right: 50%;
+				font-size: .8em;
+				line-height: 1.2em;
+
+				p {
+					padding: 15px 0;
+				}
+			}
+		}
+	}
+
+	.clock-container {
+		background: $teal;
+		border-radius: 25px;
+		padding-bottom: 40px;
+		box-shadow: 10px 10px 25px rgba( black, .2 );
+
+		@include respond-to( 768px ) {
+			margin-top: -30px;
+		}
+
+		.pad {
+			padding: 20px;
+		}
+
+		.clock {
+			font-size: 3em;
+			line-height: 1.5em;
+			letter-spacing: 1px;
+			text-align: center;
+		}
+
+		.clock-labels {
+			background: white;
+			color: $teal;
+
+			label {
+				float: left;
+				width: 40%;
+				text-align: center;
+				font-size: 1.6em;
+				line-height: 2em;
+
+				&.small {
+					width: 30%;
+				}
+			}
+		}
+	}
 }
 
 
 .footer {
-	background: white;
-
 	a {
 		text-decoration: none;
 	}
@@ -129,13 +209,6 @@ body {
 		}
 	}
 
-	.disclaimer {
-		@include clearfix;
-		font-size: .7em;
-		line-height: 1.2em;
-		padding: 20px 0;
-	}
-
 	h3 {
 		font-size: 1.4em;
 
@@ -155,6 +228,42 @@ body {
 	}
 }
 
+.contact-bar {
+	background: $teal;
+	text-align: center;
+	padding: 10px 0;
+	font-size: .9em;
+	line-height: 1.6em;
+	
+	a {
+		color: white;
+	}
+
+	@include respond-to( 768px ) {
+		text-align: left;
+		line-height: 50px;
+	}
+	
+	img {
+		display: none;
+		
+		@include respond-to( 768px ) {
+			display: block;
+			float: left;
+			margin-right: 5px;
+		}
+	}
+
+
+}
+
+.disclaimer {
+	@include clearfix;
+	font-size: .7em;
+	line-height: 1.2em;
+	padding: 20px;
+}
+
 
 // colors
 .bg-blue { background: $blue; }
@@ -168,26 +277,20 @@ body {
 // button styles
 input[type=submit], button, .btn {
 	@include font-title;
-	padding: 15px;
-	background: $lime;
-	color: $blue-dark;
+	padding: 15px 30px;
+	background: $teal;
+	color: white;
 	border: 0;
-	border-radius: 10px;
-	font-size: 1.4em;
-	line-height: 1.6em;
-	margin: 0 5px;
+	border-radius: 20px;
+	font-size: 1.2em;
+	line-height: 1.4em;
 	text-transform: uppercase;
 	display: inline-block;
 	cursor: pointer;
 	text-align: center;
 	
 	&:hover {
-		opacity: .9;
-	}
-
-	@include respond-to( 768px ) {
-		max-width: 50%;
-		margin: 30px auto;
+		opacity: lighten( $teal, 5% );
 	}
 }
 

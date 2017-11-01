@@ -64,7 +64,7 @@ em {
 	@include font-italic;
 }
 
-input[type=text], select, input[type=email], input[type=phone] {
+input[type=text], select, input[type=email], input[type=phone], textarea {
 	display: block;
 	width: 100%;
 	padding: 14px 20px;
@@ -85,7 +85,10 @@ input[type=text], select, input[type=email], input[type=phone] {
 	&.percent {
 		background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeBAMAAACcf1DPAAAAJ1BMVEUAAACkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKRvW9ciAAAADHRSTlMAOZbGgBBY7NlwILNagw7UAAAAyUlEQVQoz9XPrw6CUBgF8KOIzj9BOoHNzUSwslmMTgIm5mYwGgg+gFEbwQcw+AAEHoAgfwRk56GUKN98AE64N/x273c+tCBHXupLfzehSzIEVF6bEpTaMgfGnDbFrjBJAS8TY8wnlBIjLoREXymg8CHEfmGQws4hoifOPesw3M3mDVFY8OQWW580fkU1mTpmrNA6ix81p09DTzAoILIv4cXoUkoUw47Rk82HvP15E6R1ebhyjl8BY1oU3Xo8AGq9j5B1ffY3K7QgHxSbQJgYtVbrAAAAAElFTkSuQmCC') right center no-repeat;	
 	}
+}
 
+textarea {
+	height: 120px;
 }
 
 select {
