@@ -30,6 +30,6 @@ function initializeClock(id, endtime){
 }
 
 
-initializeClock( 'clock', 'December 31 2017 23:59:59 GMT-0500' );
+initializeClock( 'clock', 'December 31 2018 23:59:59 GMT-0500' );
 
 

@@ -6,6 +6,7 @@ $blue: #0E426A;
 $blue-dark: #214099;
 $navy: #002856;
 $teal: #4AACC4;
+$blue-grey: #9DB7B5;
 $green: #66BD5A;
 $lime: #A2CE4D;
 $yellow: #FFF200;
@@ -26,7 +27,7 @@ $red: #D22E27;
 
 
 body {
-	background: $fawn;
+	background: white;
 }
 
 // background-container
@@ -128,11 +129,15 @@ body {
 
 			.right-content {
 				margin-right: -20px;
-				background: url(../img/snowman.png) right center no-repeat;
+				background: url(../img/presents.png) right center no-repeat;
 				background-size: contain;
 				padding-right: 50%;
 				font-size: .8em;
 				line-height: 1.2em;
+
+				@include respond-to( 1024px ) {
+					margin-top: 20px;
+				}
 
 				p {
 					padding: 15px 0;
@@ -142,7 +147,7 @@ body {
 	}
 
 	.clock-container {
-		background: $teal;
+		background: $blue-grey;
 		border-radius: 25px;
 		padding-bottom: 40px;
 		box-shadow: 10px 10px 25px rgba( black, .2 );
@@ -233,7 +238,7 @@ body {
 }
 
 .contact-bar {
-	background: $teal;
+	background: $blue-grey;
 	text-align: center;
 	padding: 10px 0;
 	font-size: .9em;
@@ -282,7 +287,7 @@ body {
 input[type=submit], button, .btn {
 	@include font-title;
 	padding: 15px 30px;
-	background: $teal;
+	background: $blue-grey;
 	color: white;
 	border: 0;
 	border-radius: 20px;
@@ -294,7 +299,7 @@ input[type=submit], button, .btn {
 	text-align: center;
 	
 	&:hover {
-		opacity: lighten( $teal, 5% );
+		opacity: lighten( $blue-grey, 5% );
 	}
 }
 
